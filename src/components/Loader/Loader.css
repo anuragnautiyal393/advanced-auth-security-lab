@@ -1,0 +1,36 @@
+.loader {
+  border: 3px solid var(--color-primary-bg);
+  border-top: 3px solid var(--color-primary);
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite;
+}
+
+.loader-sm {
+  width: 16px;
+  height: 16px;
+  border-width: 2px;
+}
+
+.loader-md {
+  width: 28px;
+  height: 28px;
+}
+
+.loader-lg {
+  width: 48px;
+  height: 48px;
+  border-width: 4px;
+}
+
+.loader-fullpage {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  width: 100%;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}

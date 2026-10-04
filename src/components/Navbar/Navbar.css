@@ -1,0 +1,112 @@
+.navbar {
+  background-color: var(--color-white);
+  border-bottom: 1px solid var(--color-border);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.navbar-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 68px;
+}
+
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-primary-dark);
+}
+
+.navbar-logo span {
+  color: var(--color-primary);
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  font-weight: 500;
+  font-size: 14.5px;
+}
+
+.navbar-links a {
+  color: var(--color-text);
+  transition: color var(--transition-fast);
+}
+
+.navbar-links a:hover {
+  color: var(--color-primary);
+}
+
+.navbar-cta {
+  background-color: var(--color-primary);
+  color: var(--color-white) !important;
+  padding: 9px 18px;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast);
+}
+
+.navbar-cta:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.navbar-logout-btn {
+  background: none;
+  border: 1.5px solid var(--color-error);
+  color: var(--color-error);
+  padding: 8px 16px;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.navbar-logout-btn:hover {
+  background-color: var(--color-error);
+  color: var(--color-white);
+}
+
+.navbar-toggle {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 22px;
+  color: var(--color-primary-dark);
+}
+
+@media (max-width: 720px) {
+  .navbar-toggle {
+    display: block;
+  }
+
+  .navbar-links {
+    position: absolute;
+    top: 68px;
+    left: 0;
+    right: 0;
+    background-color: var(--color-white);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height var(--transition-normal);
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .navbar-links.open {
+    max-height: 320px;
+  }
+
+  .navbar-links li {
+    width: 100%;
+    padding: 14px 24px;
+    border-top: 1px solid var(--color-border);
+  }
+
+  .navbar-cta {
+    display: inline-block;
+  }
+}

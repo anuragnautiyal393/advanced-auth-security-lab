@@ -1,0 +1,87 @@
+.security-container {
+  max-width: 980px;
+}
+
+.security-status-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  margin-bottom: 48px;
+}
+
+.status-card {
+  padding: 24px 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+}
+
+.status-icon {
+  font-size: 28px;
+}
+
+.status-label {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  font-weight: 600;
+}
+
+.status-value {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--color-text);
+}
+
+.tips-heading {
+  font-size: 20px;
+  color: var(--color-primary-dark);
+  margin-bottom: 20px;
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.tip-card {
+  padding: 22px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  transition: transform var(--transition-normal);
+}
+
+.tip-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-lg);
+}
+
+.tip-icon {
+  font-size: 24px;
+}
+
+.tip-card h3 {
+  font-size: 15.5px;
+  color: var(--color-primary-dark);
+}
+
+.tip-card p {
+  font-size: 13.5px;
+  color: var(--color-text-muted);
+}
+
+@media (max-width: 900px) {
+  .security-status-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .security-status-grid,
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+}

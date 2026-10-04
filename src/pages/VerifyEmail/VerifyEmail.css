@@ -1,0 +1,14 @@
+.verify-email-card {
+  text-align: center;
+}
+
+.verify-icon {
+  font-size: 46px;
+  margin-bottom: 12px;
+}
+
+.verify-status-text {
+  margin-top: 16px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+}
